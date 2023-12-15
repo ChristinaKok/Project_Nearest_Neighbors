@@ -15,4 +15,4 @@ graph_search: main_graph.cpp graph.cpp functions.cpp lsh.cpp
 	$(CC) $(CFLAGS) -o graph_search main_graph.cpp graph.cpp functions.cpp lsh.cpp
 
 clean:
-	rm -f *.o lsh cube graph_search
+	rm -f *.o lsh cube cluster graph_search
