@@ -1,4 +1,5 @@
 #include "functions.h"
+#include <sstream>
 
 int ReverseInt (int i){
     unsigned char ch1, ch2, ch3, ch4;
@@ -107,4 +108,59 @@ vector<string> Read_txt(int size, string filename){
     }
 
     return graph_data;
+}
+
+int readData(string filename,std::vector<std::vector<double>> &ar, int &total_number){
+
+    string line;
+    ifstream file(filename);
+    int counter = 0;
+    int num_of_images;
+    int data_size = 0;
+    if (file.is_open()) {
+        while (getline(file, line)) {
+            
+            if (counter == 0) {
+                num_of_images = stoi(line);
+                ar.resize(num_of_images);
+                total_number = num_of_images;
+            } else if (counter == 1) {
+                data_size = stoi(line);
+            } else {
+                int num; //number of image
+                int i = 0;
+                string temp_num;
+                while(line[i] != ':'){
+                    temp_num += line[i];      
+                    i++;
+                }
+                num = stoi(temp_num); //convert string to int
+                i = i + 3; //skip spaces
+    
+                string temp;
+                while(i < (int)line.size()){  
+
+                    temp += line[i];
+                    if(line[i] == ' '){ //end of number
+                        
+                        i = i + 2; //skip spaces
+                        temp.erase(remove(temp.begin(), temp.end(), ' '), temp.end()); //remove spaces
+                        
+                        double x;
+                        x = stod(temp); //convert string to double
+                        ar[num].push_back(x);
+                        temp = ""; //clear temp
+
+                    }
+                    else{
+                        i++;
+                    }
+
+                }
+            }
+            counter++;
+        }
+        file.close();
+    }
+    return data_size;
 }
