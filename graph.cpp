@@ -16,25 +16,29 @@ void initialize_graph(int data_size, int k, const vector<vector<double>> &ar){
 
     initialize_hash_table(L, k_h, ar);
 
-    vector<vector<pair<int,double>>> neighbors(number_of_points); 
+    // vector<vector<pair<int,double>>> neighbors(number_of_points); 
     graph.resize(number_of_points);
 
     //find neighbors
     for (int p=0; p<number_of_points; p++){
         
         vector<double> point = ar[p];
+        vector<pair<int,double>> neighbors;
+        cout << p << "  -  ";
 
         for (int i=0; i<L; i++){    
             double id;                                      //ID of query for this hash table
             double g = initialize_g_func(i,point,k_h,id);    //g of query for this hash table
 
-            find_neighbors(neighbors[p], i, g, id, ar, point, euclidean_distance);
+            find_neighbors(neighbors, i, g, id, ar, point, euclidean_distance);
         }
 
-        sort( neighbors[p].begin(), neighbors[p].end(), sort_by_dist);
-        neighbors[p].erase( unique( neighbors[p].begin(), neighbors[p].end() ), neighbors[p].end() );
+        cout << neighbors.size() << endl;
         
-        for (auto n: neighbors[p]){
+        sort( neighbors.begin(), neighbors.end(), sort_by_dist);
+        neighbors.erase( unique( neighbors.begin(), neighbors.end() ), neighbors.end() );
+        
+        for (auto n: neighbors){
             if (n.second > 0){      //if neighbor is not the same point
                 graph[p].push_back( n.first );
             }
@@ -42,6 +46,8 @@ void initialize_graph(int data_size, int k, const vector<vector<double>> &ar){
                 break;
             }
         }
+
+        neighbors.clear();
         
     }
 
@@ -282,4 +288,14 @@ set<pair<int,double>,Cmp> search(int l, int N, int start_p, const vector<vector<
     
     return neighbors;
 
+}
+
+
+void convert_init(const set<pair<int,double>,Cmp> &neighbors, const vector<vector<double>> &points, const vector<double> &query, vector<pair<int,double>> &conv_neigh){
+
+    for (auto nb: neighbors){
+        int p = nb.first;
+        double dist = euclidean_distance(points[p], query);
+        conv_neigh.push_back(make_pair(p, dist));
+    }
 }
