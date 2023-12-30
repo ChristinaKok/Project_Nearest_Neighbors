@@ -23,4 +23,6 @@ int find_navigating_node(int data_size, const vector<vector<double>> &points, do
 
 set<pair<int,double>,Cmp> search(int l, int N, int start_p, const vector<vector<double>> &points, const vector<double> &query, double (*distance)(const vector<double> &point, const vector<double> &query));
 
+void convert_init(const set<pair<int,double>,Cmp> &neighbors, const vector<vector<double>> &points, const vector<double> &query, vector<pair<int,double>> &conv_neigh);
+
 #endif
