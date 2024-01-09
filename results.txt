@@ -1,0 +1,1976 @@
+LSH
+---
+1. k=4, L=2  
+    tAverageApproximate: 0.0214641
+    tAverageTrue: 0.945242
+    AAF: 1.26889  [Average Approximation Factor]
+
+2. k=4, L=5  
+    tAverageApproximate: 0.0759091
+    tAverageTrue: 0.943188
+    AAF: 1.11932  [Average Approximation Factor]
+
+3. k=4, L=8  
+    tAverageApproximate: 0.0734359
+    tAverageTrue: 0.944114
+    AAF: 1.03022  [Average Approximation Factor]
+
+4. k=5, L=2 
+    tAverageApproximate: 0.0056561
+    tAverageTrue: 0.94219
+    AAF: 1.37922  [Average Approximation Factor]
+
+5. k=5, L=5 
+    tAverageApproximate: 0.0186032
+    tAverageTrue: 0.952174
+    AAF: 1.21873  [Average Approximation Factor]
+
+6. k=5, L=8  
+    tAverageApproximate: 0.0382773
+    tAverageTrue: 0.942391
+    AAF: 1.1349  [Average Approximation Factor] 
+
+7. k=8, L=2  
+    tAverageApproximate: 0.0004704
+    tAverageTrue: 0.94221
+    AAF: 1.36618  [Average Approximation Factor]
+
+8. k=8, L=5  
+    tAverageApproximate: 0.0020145
+    tAverageTrue: 0.948515
+    AAF: 1.13162  [Average Approximation Factor]
+
+9. k=8, L=8  
+    tAverageApproximate: 0.0026312
+    tAverageTrue: 0.943491
+    AAF: 1.3895  [Average Approximation Factor]
+
+
+
+Hypercube
+---------
+1. k=14, M=10, probes=2 
+    tAverageApproximate: 0.0002212
+    tAverageTrue: 1.03642
+    AAF: 1.80008  [Average Approximation Factor]
+
+
+2. k=14, M=100, probes=3 
+    tAverageApproximate: 0.0014481
+    tAverageTrue: 1.0543
+    AAF: 1.47338  [Average Approximation Factor]
+
+
+3. k=14, M=1000, probes=6 
+    tAverageApproximate: 0.0071972
+    tAverageTrue: 1.03961
+    AAF: 1.37643  [Average Approximation Factor]
+
+
+4. k=10, M=10, probes=2 
+    tAverageApproximate: 0.000168
+    tAverageTrue: 1.04541
+    AAF: 2.17261  [Average Approximation Factor]
+
+
+5. k=10, M=100, probes=3 
+    tAverageApproximate: 0.0016186
+    tAverageTrue: 1.06261
+    AAF: 1.57802  [Average Approximation Factor]
+
+
+6. k=10, M=1000, probes=6 
+    tAverageApproximate: 0.0118033
+    tAverageTrue: 1.03696
+    AAF: 1.30555  [Average Approximation Factor]
+
+
+
+
+
+GNNS
+----
+1. k=50, E=30, R=1 
+    tAverageApproximate: 0.0029883
+    tAverageTrue: 1.02745
+    AAF: 1.38951  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0138072
+    tAverageTrue: 1.0389
+    AAF: 1.12367  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10 
+    tAverageApproximate: 0.0281069
+    tAverageTrue: 1.02599
+    AAF: 1.04272  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0019365
+    tAverageTrue: 1.02856
+    AAF: 1.39223  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0092991
+    tAverageTrue: 1.02816
+    AAF: 1.0667  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0191917
+    tAverageTrue: 1.02746
+    AAF: 1.03077  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1 
+    tAverageApproximate: 0.0037378
+    tAverageTrue: 1.02588
+    AAF: 1.36867  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5 
+    tAverageApproximate: 0.0183216
+    tAverageTrue: 1.02717
+    AAF: 1.05356  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10 
+    tAverageApproximate: 0.0365469
+    tAverageTrue: 1.02426
+    AAF: 1.01957  [Average Approximation Factor]
+
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 0.0007207
+    tAverageTrue: 0.960818
+    AAF: 1.9327  [Average Approximation Factor]
+
+2. l=50 
+    tAverageApproximate: 0.0010972
+    tAverageTrue: 0.960078
+    AAF: 1.64473  [Average Approximation Factor]
+
+3. l=100 
+    tAverageApproximate: 0.0016989
+    tAverageTrue: 0.960246
+    AAF: 1.17165  [Average Approximation Factor]
+
+4. l=500 
+    tAverageApproximate: 0.0094177
+    tAverageTrue: 0.959738
+    AAF: 1  [Average Approximation Factor]
+
+
+=============================================================================
+neural network 1
+=============================================================================
+Reduced dimension: 10, batch_size:128, epochs:5
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0006561
+    tAverageTrue (reduced dimension): 0.126929
+    tAverageTrue (initial dimension): 0.956383
+    AAF: 1.2868  [Average Approximation Factor]
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0028417
+    tAverageTrue (reduced dimension): 0.126944
+    tAverageTrue (initial dimension): 0.961908
+    AAF: 1.2868  [Average Approximation Factor]
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0056291
+    tAverageTrue (reduced dimension): 0.126951
+    tAverageTrue (initial dimension): 0.956292
+    AAF: 1.2868  [Average Approximation Factor]
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0005376
+    tAverageTrue (reduced dimension): 0.127039
+    tAverageTrue (initial dimension): 0.957267
+    AAF: 1.41783  [Average Approximation Factor]
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.001976
+    tAverageTrue (reduced dimension): 0.126947
+    tAverageTrue (initial dimension): 0.955933
+    AAF: 1.2868  [Average Approximation Factor]
+    
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0040217
+    tAverageTrue (reduced dimension): 0.126987
+    tAverageTrue (initial dimension): 0.955795
+    AAF: 1.2868  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0008017
+    tAverageTrue (reduced dimension): 0.12717
+    tAverageTrue (initial dimension): 0.957351
+    AAF: 1.39949  [Average Approximation Factor]
+
+8. k=50, E=40, R=5 
+    tAverageApproximate: 0.003627
+    tAverageTrue (reduced dimension): 0.126919
+    tAverageTrue (initial dimension): 0.956099
+    AAF: 1.2868  [Average Approximation Factor]
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0072057
+    tAverageTrue (reduced dimension): 0.12696
+    tAverageTrue (initial dimension): 0.956338
+    AAF: 1.2868  [Average Approximation Factor]
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 4.68e-05
+    tAverageTrue (reduced dimension): 0.136875
+    tAverageTrue (initial dimension): 1.03097
+    AAF: 2.33426  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 8.27e-05
+    tAverageTrue (reduced dimension): 0.136769
+    tAverageTrue (initial dimension): 1.03234
+    AAF: 1.90796  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0001599
+    tAverageTrue (reduced dimension): 0.136775
+    tAverageTrue (initial dimension): 1.03099
+    AAF: 1.39955  [Average Approximation Factor]
+
+
+4. l=500 
+    tAverageApproximate: 0.0029982
+    tAverageTrue (reduced dimension): 0.136677
+    tAverageTrue (initial dimension): 1.03638
+    AAF: 1.2868  [Average Approximation Factor]
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:128, epochs:5
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005608
+    tAverageTrue (reduced dimension): 0.145617
+    tAverageTrue (initial dimension): 0.961828
+    AAF: 2.07952  [Average Approximation Factor]
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0022265
+    tAverageTrue (reduced dimension): 0.145204
+    tAverageTrue (initial dimension): 0.973023
+    AAF: 1.45732  [Average Approximation Factor]
+
+3. k=50, E=30, R=10 
+    tAverageApproximate: 0.0044464
+    tAverageTrue (reduced dimension): 0.145332
+    tAverageTrue (initial dimension): 0.963429
+    AAF: 1.4648  [Average Approximation Factor]
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0004252
+    tAverageTrue (reduced dimension): 0.145788
+    tAverageTrue (initial dimension): 0.960204
+    AAF: 2.13964  [Average Approximation Factor]
+
+5. k=50, E=20, R=5 
+    tAverageApproximate: 0.0015381
+    tAverageTrue (reduced dimension): 0.145187
+    tAverageTrue (initial dimension): 0.971853
+    AAF: 1.45732  [Average Approximation Factor]
+
+    
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.00307
+    tAverageTrue (reduced dimension): 0.145819
+    tAverageTrue (initial dimension): 0.961097
+    AAF: 1.45732  [Average Approximation Factor]
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0007467
+    tAverageTrue (reduced dimension): 0.145773
+    tAverageTrue (initial dimension): 0.960386
+    AAF: 1.41657  [Average Approximation Factor]
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.0029605
+    tAverageTrue (reduced dimension): 0.144993
+    tAverageTrue (initial dimension): 0.963037
+    AAF: 1.4648  [Average Approximation Factor]
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0057317
+    tAverageTrue (reduced dimension): 0.145168
+    tAverageTrue (initial dimension): 0.959369
+    AAF: 1.4648  [Average Approximation Factor]
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 0.0001179
+    tAverageTrue (reduced dimension): 0.145303
+    tAverageTrue (initial dimension): 0.958933
+    AAF: 3.28784  [Average Approximation Factor]
+
+2. l=50 
+    tAverageApproximate: 0.0001676
+    tAverageTrue (reduced dimension): 0.14663
+    tAverageTrue (initial dimension): 0.959835
+    AAF: 2.55584  [Average Approximation Factor]
+
+3. l=100 
+    tAverageApproximate: 0.0002358
+    tAverageTrue (reduced dimension): 0.145613
+    tAverageTrue (initial dimension): 0.959327
+    AAF: 1.72951  [Average Approximation Factor]
+
+4. l=500 
+    tAverageApproximate: 0.0011483
+    tAverageTrue (reduced dimension): 0.145736
+    tAverageTrue (initial dimension): 0.959787
+    AAF: 1.42099  [Average Approximation Factor]
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:64, epochs:5
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005877
+    tAverageTrue (reduced dimension): 0.127558
+    tAverageTrue (initial dimension): 0.957024
+    AAF: 2.22083  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0025752
+    tAverageTrue (reduced dimension): 0.128133
+    tAverageTrue (initial dimension): 0.959883
+    AAF: 2.06763  [Average Approximation Factor]
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0051522
+    tAverageTrue (reduced dimension): 0.127719
+    tAverageTrue (initial dimension): 0.958901
+    AAF: 2.06763  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0004672
+    tAverageTrue (reduced dimension): 0.130243
+    tAverageTrue (initial dimension): 0.959886
+    AAF: 2.51281  [Average Approximation Factor]
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0017689
+    tAverageTrue (reduced dimension): 0.129986
+    tAverageTrue (initial dimension): 1.02339
+    AAF: 2.06763  [Average Approximation Factor]
+
+    
+6. k=50, E=20, R=10 
+    tAverageApproximate: 0.0036463
+    tAverageTrue (reduced dimension): 0.12796
+    tAverageTrue (initial dimension): 0.963872
+    AAF: 2.06763  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1 
+    tAverageApproximate: 0.0006897
+    tAverageTrue (reduced dimension): 0.127624
+    tAverageTrue (initial dimension): 0.955743
+    AAF: 2.25936  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.0031663
+    tAverageTrue (reduced dimension): 0.127342
+    tAverageTrue (initial dimension): 0.957367
+    AAF: 2.06763  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10 
+   tAverageApproximate: 0.0063225
+    tAverageTrue (reduced dimension): 0.127431
+    tAverageTrue (initial dimension): 0.957562
+    AAF: 2.06763  [Average Approximation Factor]
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 6.32e-05
+    tAverageTrue (reduced dimension): 0.128408
+    tAverageTrue (initial dimension): 0.957341
+    AAF: 2.14115  [Average Approximation Factor]
+
+2. l=50 
+    tAverageApproximate: 0.0001204
+    tAverageTrue (reduced dimension): 0.128212
+    tAverageTrue (initial dimension): 0.956894
+    AAF: 1.87647  [Average Approximation Factor]
+
+3. l=100 
+    tAverageApproximate: 0.0002079
+    tAverageTrue (reduced dimension): 0.128172
+    tAverageTrue (initial dimension): 0.958438
+    AAF: 2.12791  [Average Approximation Factor]
+
+4. l=500 
+    tAverageApproximate: 0.0021306
+    tAverageTrue (reduced dimension): 0.127955
+    tAverageTrue (initial dimension): 0.958278
+    AAF: 2.06763  [Average Approximation Factor]
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:128, epochs:10
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005443
+    tAverageTrue (reduced dimension): 0.127936
+    tAverageTrue (initial dimension): 0.961314
+    AAF: 1.74444  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0028165
+    tAverageTrue (reduced dimension): 0.127705
+    tAverageTrue (initial dimension): 0.95589
+    AAF: 1.77918  [Average Approximation Factor]
+
+3. k=50, E=30, R=10 
+    tAverageApproximate: 0.0051361
+    tAverageTrue (reduced dimension): 0.127856
+    tAverageTrue (initial dimension): 0.95748
+    AAF: 1.77918  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0004166
+    tAverageTrue (reduced dimension): 0.128026
+    tAverageTrue (initial dimension): 0.955496
+    AAF: 1.78861  [Average Approximation Factor]
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.002092
+    tAverageTrue (reduced dimension): 0.127729
+    tAverageTrue (initial dimension): 0.956726
+    AAF: 1.71714  [Average Approximation Factor]
+
+    
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0038211
+    tAverageTrue (reduced dimension): 0.127652
+    tAverageTrue (initial dimension): 0.956223
+    AAF: 1.77918  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1 
+    tAverageApproximate: 0.0006101
+    tAverageTrue (reduced dimension): 0.12777
+    tAverageTrue (initial dimension): 0.956382
+    AAF: 1.68241  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.0034274
+    tAverageTrue (reduced dimension): 0.127669
+    tAverageTrue (initial dimension): 0.956124
+    AAF: 1.74444  [Average Approximation Factor]
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0063546
+    tAverageTrue (reduced dimension): 0.127765
+    tAverageTrue (initial dimension): 0.955636
+    AAF: 1.77918  [Average Approximation Factor]
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 4.46e-05
+    tAverageTrue (reduced dimension): 0.12831
+    tAverageTrue (initial dimension): 0.956849
+    AAF: 2.81235  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001149
+    tAverageTrue (reduced dimension): 0.128297
+    tAverageTrue (initial dimension): 0.956425
+    AAF: 2.24463  [Average Approximation Factor]
+
+
+3. l=100  
+    tAverageApproximate: 0.0001953
+    tAverageTrue (reduced dimension): 0.128414
+    tAverageTrue (initial dimension): 0.95691
+    AAF: 1.68756  [Average Approximation Factor]
+
+4. l=500 
+    tAverageApproximate: 0.0017972
+    tAverageTrue (reduced dimension): 0.128674
+    tAverageTrue (initial dimension): 0.956166
+    AAF: 1.77918  [Average Approximation Factor]
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:128, epochs:10
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005075
+    tAverageTrue (reduced dimension): 0.146626
+    tAverageTrue (initial dimension): 0.958095
+    AAF: 1.58491  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0020551
+    tAverageTrue (reduced dimension): 0.146664
+    tAverageTrue (initial dimension): 0.981453
+    AAF: 1.45853  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0040696
+    tAverageTrue (reduced dimension): 0.146635
+    tAverageTrue (initial dimension): 0.958334
+    AAF: 1.45853  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0003581
+    tAverageTrue (reduced dimension): 0.14657
+    tAverageTrue (initial dimension): 0.958829
+    AAF: 2.22886  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0014034
+    tAverageTrue (reduced dimension): 0.146686
+    tAverageTrue (initial dimension): 0.959628
+    AAF: 1.68755  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0029081
+    tAverageTrue (reduced dimension): 0.146551
+    tAverageTrue (initial dimension): 0.959625
+    AAF: 1.55816  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0006489
+    tAverageTrue (reduced dimension): 0.146658
+    tAverageTrue (initial dimension): 0.963527
+    AAF: 1.70848  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5 
+    tAverageApproximate: 0.0026297
+    tAverageTrue (reduced dimension): 0.146607
+    tAverageTrue (initial dimension): 0.958875
+    AAF: 1.45853  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0053031
+    tAverageTrue (reduced dimension): 0.147134
+    tAverageTrue (initial dimension): 0.960454
+    AAF: 1.45853  [Average Approximation Factor]
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 0.0001088
+    tAverageTrue (reduced dimension): 0.147621
+    tAverageTrue (initial dimension): 0.960355
+    AAF: 2.72203  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001537
+    tAverageTrue (reduced dimension): 0.147258
+    tAverageTrue (initial dimension): 0.972014
+    AAF: 2.42626  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0002323
+    tAverageTrue (reduced dimension): 0.148209
+    tAverageTrue (initial dimension): 0.960012
+    AAF: 1.67367  [Average Approximation Factor]
+
+4. l=500 
+    tAverageApproximate: 0.0010953
+    tAverageTrue (reduced dimension): 0.146993
+    tAverageTrue (initial dimension): 0.959284
+    AAF: 1.42188  [Average Approximation Factor]
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:64, epochs:5
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.000415
+    tAverageTrue (reduced dimension): 0.154937
+    tAverageTrue (initial dimension): 1.02803
+    AAF: 2.20799  [Average Approximation Factor]
+
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0022534
+    tAverageTrue (reduced dimension): 0.155693
+    tAverageTrue (initial dimension): 1.03183
+    AAF: 1.35922  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0043948
+    tAverageTrue (reduced dimension): 0.155592
+    tAverageTrue (initial dimension): 1.03148
+    AAF: 1.34324  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0002975
+    tAverageTrue (reduced dimension): 0.155835
+    tAverageTrue (initial dimension): 1.03421
+    AAF: 1.5783  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0016162
+    tAverageTrue (reduced dimension): 0.155654
+    tAverageTrue (initial dimension): 1.03086
+    AAF: 1.44418  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0032719
+    tAverageTrue (reduced dimension): 0.15737
+    tAverageTrue (initial dimension): 1.044
+    AAF: 1.38271  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0004502
+    tAverageTrue (reduced dimension): 0.15562
+    tAverageTrue (initial dimension): 1.03146
+    AAF: 2.69959  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.0029633
+    tAverageTrue (reduced dimension): 0.155424
+    tAverageTrue (initial dimension): 1.031
+    AAF: 1.34324  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0059651
+    tAverageTrue (reduced dimension): 0.157697
+    tAverageTrue (initial dimension): 1.04662
+    AAF: 1.34324  [Average Approximation Factor]
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 7.87e-05
+    tAverageTrue (reduced dimension): 0.158309
+    tAverageTrue (initial dimension): 1.04604
+    AAF: 2.97732  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001191
+    tAverageTrue (reduced dimension): 0.156136
+    tAverageTrue (initial dimension): 1.03095
+    AAF: 3.19927  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0002001
+    tAverageTrue (reduced dimension): 0.156823
+    tAverageTrue (initial dimension): 1.03494
+    AAF: 1.75764  [Average Approximation Factor]
+
+
+
+4. l=500
+    tAverageApproximate: 0.0011246
+    tAverageTrue (reduced dimension): 0.156252
+    tAverageTrue (initial dimension): 1.03132
+    AAF: 1.34413  [Average Approximation Factor]
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:64, epochs:10
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005507
+    tAverageTrue (reduced dimension): 0.127467
+    tAverageTrue (initial dimension): 0.959407
+    AAF: 1.84247  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5 
+    tAverageApproximate: 0.0025645
+    tAverageTrue (reduced dimension): 0.127998
+    tAverageTrue (initial dimension): 0.959684
+    AAF: 1.76752  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0048086
+    tAverageTrue (reduced dimension): 0.127725
+    tAverageTrue (initial dimension): 0.958043
+    AAF: 1.76752  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0004093
+    tAverageTrue (reduced dimension): 0.127734
+    tAverageTrue (initial dimension): 0.95904
+    AAF: 1.9727  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0019355
+    tAverageTrue (reduced dimension): 0.127527
+    tAverageTrue (initial dimension): 0.95938
+    AAF: 1.76752  [Average Approximation Factor]    
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0036525
+    tAverageTrue (reduced dimension): 0.127609
+    tAverageTrue (initial dimension): 0.958622
+    AAF: 1.76752  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0006758
+    tAverageTrue (reduced dimension): 0.127666
+    tAverageTrue (initial dimension): 0.959063
+    AAF: 1.71246  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.003248
+    tAverageTrue (reduced dimension): 0.127797
+    tAverageTrue (initial dimension): 0.96113
+    AAF: 1.76752  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0061961
+    tAverageTrue (reduced dimension): 0.127995
+    tAverageTrue (initial dimension): 0.961334
+    AAF: 1.76752  [Average Approximation Factor]
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 7.22e-05
+    tAverageTrue (reduced dimension): 0.128076
+    tAverageTrue (initial dimension): 0.959907
+    AAF: 2.50824  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001245
+    tAverageTrue (reduced dimension): 0.128231
+    tAverageTrue (initial dimension): 0.960774
+    AAF: 2.27121  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0002074
+    tAverageTrue (reduced dimension): 0.128205
+    tAverageTrue (initial dimension): 0.959834
+    AAF: 1.77213  [Average Approximation Factor]
+
+4. l=500 
+    tAverageApproximate: 0.0018945
+    tAverageTrue (reduced dimension): 0.128345
+    tAverageTrue (initial dimension): 0.959002
+    AAF: 1.76752  [Average Approximation Factor]
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:64, epochs:10
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0004145
+    tAverageTrue (reduced dimension): 0.155922
+    tAverageTrue (initial dimension): 1.03429
+    AAF: 1.41002  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0022936
+    tAverageTrue (reduced dimension): 0.156516
+    tAverageTrue (initial dimension): 1.04118
+    AAF: 1.27621  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0044213
+    tAverageTrue (reduced dimension): 0.155674
+    tAverageTrue (initial dimension): 1.03127
+    AAF: 1.27621  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0002394
+    tAverageTrue (reduced dimension): 0.155995
+    tAverageTrue (initial dimension): 1.03284
+    AAF: 1.65525  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5   
+    tAverageApproximate: 0.0015968
+    tAverageTrue (reduced dimension): 0.156094
+    tAverageTrue (initial dimension): 1.03362
+    AAF: 1.36308  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0031493
+    tAverageTrue (reduced dimension): 0.156781
+    tAverageTrue (initial dimension): 1.03683
+    AAF: 1.341  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0005466
+    tAverageTrue (reduced dimension): 0.155922
+    tAverageTrue (initial dimension): 1.0316
+    AAF: 1.62875  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.0030682
+    tAverageTrue (reduced dimension): 0.156005
+    tAverageTrue (initial dimension): 1.03275
+    AAF: 1.3206  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0058886
+    tAverageTrue (reduced dimension): 0.155818
+    tAverageTrue (initial dimension): 1.03171
+    AAF: 1.24048  [Average Approximation Factor]
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 6.62e-05
+    tAverageTrue (reduced dimension): 0.156487
+    tAverageTrue (initial dimension): 1.04473
+    AAF: 3.13032  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001108
+    tAverageTrue (reduced dimension): 0.156571
+    tAverageTrue (initial dimension): 1.04512
+    AAF: 2.20006  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0001951
+    tAverageTrue (reduced dimension): 0.156936
+    tAverageTrue (initial dimension): 1.03541
+    AAF: 2.06567  [Average Approximation Factor]
+
+
+4. l=500 
+    tAverageApproximate: 0.0011348
+    tAverageTrue (reduced dimension): 0.156367
+    tAverageTrue (initial dimension): 1.03246
+    AAF: 1.24048  [Average Approximation Factor]
+
+
+
+
+=============================================================================
+neural network 2
+=============================================================================
+Reduced dimension: 10, batch_size:128, epochs:5
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005146
+    tAverageTrue (reduced dimension): 0.129167
+    tAverageTrue (initial dimension): 0.959419
+    AAF: 1.39912  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5 
+    tAverageApproximate: 0.0023155
+    tAverageTrue (reduced dimension): 0.129314
+    tAverageTrue (initial dimension): 0.95973
+    AAF: 1.28208  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0045613
+    tAverageTrue (reduced dimension): 0.128904
+    tAverageTrue (initial dimension): 0.960321
+    AAF: 1.24605  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0004003
+    tAverageTrue (reduced dimension): 0.128966
+    tAverageTrue (initial dimension): 0.959647
+    AAF: 1.37148  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0015883
+    tAverageTrue (reduced dimension): 0.128739
+    tAverageTrue (initial dimension): 0.958736
+    AAF: 1.27352  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0031343
+    tAverageTrue (reduced dimension): 0.12912
+    tAverageTrue (initial dimension): 0.958509
+    AAF: 1.24605  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0006423
+    tAverageTrue (reduced dimension): 0.128982
+    tAverageTrue (initial dimension): 0.959397
+    AAF: 1.34787  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.0028578
+    tAverageTrue (reduced dimension): 0.128912
+    tAverageTrue (initial dimension): 0.962438
+    AAF: 1.21514  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0059655
+    tAverageTrue (reduced dimension): 0.130204
+    tAverageTrue (initial dimension): 0.967003
+    AAF: 1.17911  [Average Approximation Factor]
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 5.43e-05
+    tAverageTrue (reduced dimension): 0.130798
+    tAverageTrue (initial dimension): 0.967031
+    AAF: 2.69876  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001227
+    tAverageTrue (reduced dimension): 0.130199
+    tAverageTrue (initial dimension): 0.96697
+    AAF: 2.01  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0002062
+    tAverageTrue (reduced dimension): 0.131963
+    tAverageTrue (initial dimension): 0.973402
+    AAF: 1.26535  [Average Approximation Factor]
+
+
+4. l=500 
+    tAverageApproximate: 0.0015141
+    tAverageTrue (reduced dimension): 0.131267
+    tAverageTrue (initial dimension): 0.967971
+    AAF: 1.17911  [Average Approximation Factor]
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:128, epochs:5
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0004724
+    tAverageTrue (reduced dimension): 0.146988
+    tAverageTrue (initial dimension): 0.964697
+    AAF: 1.53523  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0021946
+    tAverageTrue (reduced dimension): 0.147612
+    tAverageTrue (initial dimension): 0.963146
+    AAF: 1.26457  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0045489
+    tAverageTrue (reduced dimension): 0.146787
+    tAverageTrue (initial dimension): 0.960862
+    AAF: 1.07933  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0002889
+    tAverageTrue (reduced dimension): 0.148314
+    tAverageTrue (initial dimension): 0.959786
+    AAF: 2.34359  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0015482
+    tAverageTrue (reduced dimension): 0.147038
+    tAverageTrue (initial dimension): 0.959334
+    AAF: 1.12813  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0031461
+    tAverageTrue (reduced dimension): 0.147792
+    tAverageTrue (initial dimension): 0.972082
+    AAF: 1.0838  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0006633
+    tAverageTrue (reduced dimension): 0.146655
+    tAverageTrue (initial dimension): 0.958097
+    AAF: 1.29638  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.003017
+    tAverageTrue (reduced dimension): 0.147245
+    tAverageTrue (initial dimension): 0.960302
+    AAF: 1.07933  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0060359
+    tAverageTrue (reduced dimension): 0.146752
+    tAverageTrue (initial dimension): 0.959821
+    AAF: 1.07933  [Average Approximation Factor]
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 9.03e-05
+    tAverageTrue (reduced dimension): 0.148249
+    tAverageTrue (initial dimension): 0.963582
+    AAF: 2.74625  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001396
+    tAverageTrue (reduced dimension): 0.147334
+    tAverageTrue (initial dimension): 0.965503
+    AAF: 2.1305  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0002414
+    tAverageTrue (reduced dimension): 0.147443
+    tAverageTrue (initial dimension): 0.966132
+    AAF: 1.23659  [Average Approximation Factor]
+
+
+4. l=500 
+    tAverageApproximate: 0.0015202
+    tAverageTrue (reduced dimension): 0.149504
+    tAverageTrue (initial dimension): 0.970312
+    AAF: 1.07933  [Average Approximation Factor]
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:64, epochs:5
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0004886
+    tAverageTrue (reduced dimension): 0.129611
+    tAverageTrue (initial dimension): 0.969129
+    AAF: 1.34093  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0022913
+    tAverageTrue (reduced dimension): 0.131048
+    tAverageTrue (initial dimension): 0.974973
+    AAF: 1.17933  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0044359
+    tAverageTrue (reduced dimension): 0.128864
+    tAverageTrue (initial dimension): 0.963496
+    AAF: 1.17933  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0003857
+    tAverageTrue (reduced dimension): 0.128194
+    tAverageTrue (initial dimension): 0.961704
+    AAF: 1.3408  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5 
+    tAverageApproximate: 0.0015014
+    tAverageTrue (reduced dimension): 0.129464
+    tAverageTrue (initial dimension): 0.965549
+    AAF: 1.23239  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0030854
+    tAverageTrue (reduced dimension): 0.129161
+    tAverageTrue (initial dimension): 0.96917
+    AAF: 1.17933  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0006073
+    tAverageTrue (reduced dimension): 0.130132
+    tAverageTrue (initial dimension): 0.971893
+    AAF: 1.33664  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.0028695
+    tAverageTrue (reduced dimension): 0.128053
+    tAverageTrue (initial dimension): 0.959156
+    AAF: 1.17933  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0057336
+    tAverageTrue (reduced dimension): 0.129105
+    tAverageTrue (initial dimension): 0.95886
+    AAF: 1.17933  [Average Approximation Factor]
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 5.3e-05
+    tAverageTrue (reduced dimension): 0.128696
+    tAverageTrue (initial dimension): 0.959852
+    AAF: 3.02426  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001231
+    tAverageTrue (reduced dimension): 0.128729
+    tAverageTrue (initial dimension): 0.959155
+    AAF: 2.05537  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0001993
+    tAverageTrue (reduced dimension): 0.128835
+    tAverageTrue (initial dimension): 0.960215
+    AAF: 1.23204  [Average Approximation Factor]
+
+
+4. l=500
+    tAverageApproximate: 0.0015109
+    tAverageTrue (reduced dimension): 0.128584
+    tAverageTrue (initial dimension): 0.960155
+    AAF: 1.17933  [Average Approximation Factor]
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:64, epochs:5
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005111
+    tAverageTrue (reduced dimension): 0.146557
+    tAverageTrue (initial dimension): 0.955975
+    AAF: 1.31119  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0024338
+    tAverageTrue (reduced dimension): 0.146546
+    tAverageTrue (initial dimension): 0.957606
+    AAF: 1.2072  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0046745
+    tAverageTrue (reduced dimension): 0.146438
+    tAverageTrue (initial dimension): 0.956398
+    AAF: 1.05509  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0003872
+    tAverageTrue (reduced dimension): 0.147757
+    tAverageTrue (initial dimension): 0.957639
+    AAF: 1.80611  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0015055
+    tAverageTrue (reduced dimension): 0.146461
+    tAverageTrue (initial dimension): 0.957239
+    AAF: 1.27172  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0030315
+    tAverageTrue (reduced dimension): 0.14669
+    tAverageTrue (initial dimension): 0.956624
+    AAF: 1.04095  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0006614
+    tAverageTrue (reduced dimension): 0.146411
+    tAverageTrue (initial dimension): 0.956788
+    AAF: 1.30105  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.0031602
+    tAverageTrue (reduced dimension): 0.1463
+    tAverageTrue (initial dimension): 0.956828
+    AAF: 1.16774  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0062245
+    tAverageTrue (reduced dimension): 0.146256
+    tAverageTrue (initial dimension): 0.959481
+    AAF: 1.05509  [Average Approximation Factor]
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 0.0001145
+    tAverageTrue (reduced dimension): 0.147111
+    tAverageTrue (initial dimension): 0.956829
+    AAF: 2.79945  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001465
+    tAverageTrue (reduced dimension): 0.146935
+    tAverageTrue (initial dimension): 0.96362
+    AAF: 2.33755  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0002491
+    tAverageTrue (reduced dimension): 0.147008
+    tAverageTrue (initial dimension): 0.968063
+    AAF: 1.46981  [Average Approximation Factor]
+
+
+4. l=500 
+    tAverageApproximate: 0.0014491
+    tAverageTrue (reduced dimension): 0.147207
+    tAverageTrue (initial dimension): 0.95655
+    AAF: 1.05509  [Average Approximation Factor]
+
+
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:128, epochs:10
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005218
+    tAverageTrue (reduced dimension): 0.137851
+    tAverageTrue (initial dimension): 1.02986
+    AAF: 1.36794  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0024989
+    tAverageTrue (reduced dimension): 0.137145
+    tAverageTrue (initial dimension): 1.02831
+    AAF: 1.16032  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10 
+    tAverageApproximate: 0.0049428
+    tAverageTrue (reduced dimension): 0.137376
+    tAverageTrue (initial dimension): 1.03143
+    AAF: 1.16032  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1 
+    tAverageApproximate: 0.0003684
+    tAverageTrue (reduced dimension): 0.137264
+    tAverageTrue (initial dimension): 1.02945
+    AAF: 1.40769  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5 
+    tAverageApproximate: 0.0015839
+    tAverageTrue (reduced dimension): 0.137386
+    tAverageTrue (initial dimension): 1.02882
+    AAF: 1.13754  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10  
+    tAverageApproximate: 0.0031609
+    tAverageTrue (reduced dimension): 0.136929
+    tAverageTrue (initial dimension): 1.02715
+    AAF: 1.16032  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1 
+    tAverageApproximate: 0.0006318
+    tAverageTrue (reduced dimension): 0.137135
+    tAverageTrue (initial dimension): 1.02679
+    AAF: 1.33229  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5 
+    tAverageApproximate: 0.0033121
+    tAverageTrue (reduced dimension): 0.13711
+    tAverageTrue (initial dimension): 1.02702
+    AAF: 1.16032  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0066194
+    tAverageTrue (reduced dimension): 0.137273
+    tAverageTrue (initial dimension): 1.02781
+    AAF: 1.16032  [Average Approximation Factor]
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 5.87e-05
+    tAverageTrue (reduced dimension): 0.137692
+    tAverageTrue (initial dimension): 1.02603
+    AAF: 2.74226  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001161
+    tAverageTrue (reduced dimension): 0.138063
+    tAverageTrue (initial dimension): 1.02872
+    AAF: 1.91674  [Average Approximation Factor]
+
+
+3. l=100
+    tAverageApproximate: 0.0001998
+    tAverageTrue (reduced dimension): 0.137372
+    tAverageTrue (initial dimension): 1.0257
+    AAF: 1.13633  [Average Approximation Factor]
+
+
+4. l=500
+    tAverageApproximate: 0.001681
+    tAverageTrue (reduced dimension): 0.138025
+    tAverageTrue (initial dimension): 1.02856
+    AAF: 1.16032  [Average Approximation Factor]
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:128, epochs:10
+
+GNNS
+----
+1. k=50, E=30, R=1 
+    tAverageApproximate: 0.0004844
+    tAverageTrue (reduced dimension): 0.156586
+    tAverageTrue (initial dimension): 1.02791
+    AAF: 1.84022  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5  
+    tAverageApproximate: 0.0025314
+    tAverageTrue (reduced dimension): 0.156605
+    tAverageTrue (initial dimension): 1.02621
+    AAF: 1.11691  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0053317
+    tAverageTrue (reduced dimension): 0.156555
+    tAverageTrue (initial dimension): 1.02738
+    AAF: 1.10461  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1 
+    tAverageApproximate: 0.0003839
+    tAverageTrue (reduced dimension): 0.157151
+    tAverageTrue (initial dimension): 1.02934
+    AAF: 1.81484  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5 
+    tAverageApproximate: 0.0017628
+    tAverageTrue (reduced dimension): 0.156899
+    tAverageTrue (initial dimension): 1.02772
+    AAF: 1.2706  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10 
+    tAverageApproximate: 0.0034797
+    tAverageTrue (reduced dimension): 0.158165
+    tAverageTrue (initial dimension): 1.02774
+    AAF: 1.14408  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1  
+    tAverageApproximate: 0.0006523
+    tAverageTrue (reduced dimension): 0.155765
+    tAverageTrue (initial dimension): 1.02042
+    AAF: 1.31678  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5  
+    tAverageApproximate: 0.003244
+    tAverageTrue (reduced dimension): 0.155859
+    tAverageTrue (initial dimension): 1.02214
+    AAF: 1.10461  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10  
+    tAverageApproximate: 0.0070077
+    tAverageTrue (reduced dimension): 0.15695
+    tAverageTrue (initial dimension): 1.02916
+    AAF: 1.10461  [Average Approximation Factor]
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 0.0001015
+    tAverageTrue (reduced dimension): 0.156982
+    tAverageTrue (initial dimension): 1.02502
+    AAF: 2.70762  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001352
+    tAverageTrue (reduced dimension): 0.157635
+    tAverageTrue (initial dimension): 1.0291
+    AAF: 2.10108  [Average Approximation Factor]
+
+
+3. l=100 
+    tAverageApproximate: 0.0002435
+    tAverageTrue (reduced dimension): 0.157421
+    tAverageTrue (initial dimension): 1.03157
+    AAF: 1.12546  [Average Approximation Factor]
+
+
+4. l=500 
+    tAverageApproximate: 0.0017243
+    tAverageTrue (reduced dimension): 0.157851
+    tAverageTrue (initial dimension): 1.0283
+    AAF: 1.10461  [Average Approximation Factor]
+
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:64, epochs:10
+
+GNNS
+----
+1. k=50, E=30, R=1  
+    tAverageApproximate: 0.0005759
+    tAverageTrue (reduced dimension): 0.137983
+    tAverageTrue (initial dimension): 1.02782
+    AAF: 1.21637  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5 
+    tAverageApproximate: 0.0024314
+    tAverageTrue (reduced dimension): 0.137952
+    tAverageTrue (initial dimension): 1.02916
+    AAF: 1.19639  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10  
+    tAverageApproximate: 0.0049268
+    tAverageTrue (reduced dimension): 0.13797
+    tAverageTrue (initial dimension): 1.02789
+    AAF: 1.1019  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1  
+    tAverageApproximate: 0.0003953
+    tAverageTrue (reduced dimension): 0.138222
+    tAverageTrue (initial dimension): 1.02913
+    AAF: 1.34618  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5  
+    tAverageApproximate: 0.0016594
+    tAverageTrue (reduced dimension): 0.138012
+    tAverageTrue (initial dimension): 1.03059
+    AAF: 1.11529  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10 
+    tAverageApproximate: 0.0033442
+    tAverageTrue (reduced dimension): 0.138733
+    tAverageTrue (initial dimension): 1.03468
+    AAF: 1.1019  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1 
+    tAverageApproximate: 0.0005505
+    tAverageTrue (reduced dimension): 0.138177
+    tAverageTrue (initial dimension): 1.02974
+    AAF: 1.18646  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5 
+    tAverageApproximate: 0.003075
+    tAverageTrue (reduced dimension): 0.13784
+    tAverageTrue (initial dimension): 1.02708
+    AAF: 1.1019  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10 
+    tAverageApproximate: 0.0062991
+    tAverageTrue (reduced dimension): 0.13876
+    tAverageTrue (initial dimension): 1.03235
+    AAF: 1.1019  [Average Approximation Factor]
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 5.62e-05
+    tAverageTrue (reduced dimension): 0.139095
+    tAverageTrue (initial dimension): 1.03056
+    AAF: 3.06207  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.0001064
+    tAverageTrue (reduced dimension): 0.139011
+    tAverageTrue (initial dimension): 1.03078
+    AAF: 1.98775  [Average Approximation Factor]
+
+
+3. l=100
+    tAverageApproximate: 0.0001802
+    tAverageTrue (reduced dimension): 0.13933
+    tAverageTrue (initial dimension): 1.02893
+    AAF: 1.19046  [Average Approximation Factor]
+
+
+4. l=500 
+    tAverageApproximate: 0.0015639
+    tAverageTrue (reduced dimension): 0.138636
+    tAverageTrue (initial dimension): 1.02908
+    AAF: 1.1019  [Average Approximation Factor]
+
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:64, epochs:10
+
+GNNS
+----
+1. k=50, E=30, R=1
+    tAverageApproximate: 0.000506
+    tAverageTrue (reduced dimension): 0.156688
+    tAverageTrue (initial dimension): 1.02979
+    AAF: 1.45577  [Average Approximation Factor]
+
+
+2. k=50, E=30, R=5 
+    tAverageApproximate: 0.0026588
+    tAverageTrue (reduced dimension): 0.1565
+    tAverageTrue (initial dimension): 1.02867
+    AAF: 1.16046  [Average Approximation Factor]
+
+
+3. k=50, E=30, R=10 
+    tAverageApproximate: 0.0051315
+    tAverageTrue (reduced dimension): 0.156715
+    tAverageTrue (initial dimension): 1.03779
+    AAF: 1.10765  [Average Approximation Factor]
+
+
+4. k=50, E=20, R=1 
+    tAverageApproximate: 0.0003783
+    tAverageTrue (reduced dimension): 0.1566
+    tAverageTrue (initial dimension): 1.02766
+    AAF: 1.80253  [Average Approximation Factor]
+
+
+5. k=50, E=20, R=5 
+    tAverageApproximate: 0.0018091
+    tAverageTrue (reduced dimension): 0.156587
+    tAverageTrue (initial dimension): 1.02961
+    AAF: 1.23499  [Average Approximation Factor]
+
+
+6. k=50, E=20, R=10 
+    tAverageApproximate: 0.0035516
+    tAverageTrue (reduced dimension): 0.15648
+    tAverageTrue (initial dimension): 1.02765
+    AAF: 1.09077  [Average Approximation Factor]
+
+
+7. k=50, E=40, R=1 
+    tAverageApproximate: 0.00066
+    tAverageTrue (reduced dimension): 0.156175
+    tAverageTrue (initial dimension): 1.02546
+    AAF: 1.36903  [Average Approximation Factor]
+
+
+8. k=50, E=40, R=5 
+    tAverageApproximate: 0.0035731
+    tAverageTrue (reduced dimension): 0.156717
+    tAverageTrue (initial dimension): 1.02812
+    AAF: 1.08536  [Average Approximation Factor]
+
+
+9. k=50, E=40, R=10 
+    tAverageApproximate: 0.0070105
+    tAverageTrue (reduced dimension): 0.155745
+    tAverageTrue (initial dimension): 1.03191
+    AAF: 1.08536  [Average Approximation Factor]
+
+
+
+MRNG
+----
+1. l=20 
+    tAverageApproximate: 0.0001042
+    tAverageTrue (reduced dimension): 0.15699
+    tAverageTrue (initial dimension): 1.02617
+    AAF: 2.92991  [Average Approximation Factor]
+
+
+2. l=50 
+    tAverageApproximate: 0.000142
+    tAverageTrue (reduced dimension): 0.158309
+    tAverageTrue (initial dimension): 1.02993
+    AAF: 2.4252  [Average Approximation Factor]
+
+
+3. l=100
+    tAverageApproximate: 0.0002425
+    tAverageTrue (reduced dimension): 0.157539
+    tAverageTrue (initial dimension): 1.02986
+    AAF: 1.46889  [Average Approximation Factor]
+
+
+4. l=500
+    tAverageApproximate: 0.0016751
+    tAverageTrue (reduced dimension): 0.157094
+    tAverageTrue (initial dimension): 1.02727
+    AAF: 1.08536  [Average Approximation Factor]
+
+
+
+
+
+============================================================================
+clusters
+============================================================================
+Classic (Lloyd)
+---------------
+clustering_time: 2.97088
+Silhouettte: [0.0899059  0.0674887  0.20742  0.105804  0.0275066  0.0469845  0.107468  0.0579078  0.0295853  0.083394  0.0823466  ]
+Objective function: 2.55792e+10
+
+
+Reverse LSH
+------------
+clustering_time: 1.19592
+Silhouettte: [0.0573821  0.0740834  0.00599916  -0.00588174  0.0119476  0.0298919  -0.0440004  -0.0482569  -0.0049917  -0.0562613  0.00199121  ]
+Objective function: 3.22262e+10
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 1.19383
+Silhouettte: [0.175702  0.109397  0.187416  0.0278771  -0.0342546  0.0144534  0.248281  0.0422434  0.0809018  0.0884033  0.0940421  ]
+Objective function: 3.23891e+10
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:128, epochs:10
+
+Classic (Lloyd)
+---------------
+clustering_time: 0.597674
+Silhouettte: [0.0803236  0.0140547  0.20338  0.072211  0.046899  0.0807404  0.0202996  0.0684108  0.104426  0.026938  0.0717682  ]
+Objective function: 4.20655e+10
+
+Reverse LSH
+------------
+clustering_time: 0.598427
+Silhouettte: [0.0361247  0.0441248  0.102191  0.0632456  0.0394055  0.10556  0.0300612  0.0551565  -0.0168633  0.0120474  0.0471053  ]
+Objective function: 4.58434e+10
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 0.567404
+Silhouettte: [0.0578024  0.0840647  0.168846  0.0692983  0.0612171  0.15041  0.016816  0.0521992  -0.027976  0.00217105  0.0634849  ]
+Objective function: 4.6978e+10
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:128, epochs:10
+
+Classic (Lloyd)
+---------------
+clustering_time: 0.642667
+Silhouettte: [0.0834656  0.00683938  0.0924008  0.217123  0.109393  0.0188349  0.0407762  0.0575273  0.0423465  0.0513031  0.072001  ]
+Objective function: 4.34697e+10
+
+Reverse LSH
+------------
+clustering_time: 0.617372
+Silhouettte: [0.121916  0.07415  0.0602699  0.257878  0.0913031  0.00523277  0.0136779  -0.00995337  0.0415717  0.00801487  0.0664061  ]
+Objective function: 4.30372e+10
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 0.572025
+Silhouettte: [0.108321  0.0656037  0.0438549  0.216161  0.0855504  -0.0253238  0.022243  -0.0172768  0.0788556  0.0230574  0.0601047  ]
+Objective function: 4.74147e+10
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:64, epochs:10
+
+Classic (Lloyd)
+---------------
+clustering_time: 0.605314
+Silhouettte: [0.0187533  0.230375  0.0403342  0.0440009  0.0863298  0.0875165  0.0819869  0.0666937  0.0817127  0.0232891  0.0760992  ]
+Objective function: 4.2987e+10
+
+
+Reverse LSH
+------------
+clustering_time: 0.594305
+Silhouettte: [0.13248  0.164007  0.00953168  0.0883434  0.0861211  -0.00766247  0.0204214  0.028833  0.0671749  -0.00886733  0.0580383  ]
+Objective function: 4.71618e+10
+
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 0.563496
+Silhouettte: [0.184252  0.145512  0.0836298  0.180826  0.07505  -0.0173719  0.0245497  0.0263193  0.0442685  0.0409986  0.0788034  ]
+Objective function: 4.65628e+10
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:64, epochs:10
+
+Classic (Lloyd)
+---------------
+clustering_time: 0.703648
+Silhouettte: [0.044239  0.0933274  0.0134659  0.0585128  0.0946876  0.103284  0.0641918  0.00693818  0.0639426  0.218233  0.0760822  ]
+Objective function: 4.12428e+10
+
+
+Reverse LSH
+------------
+clustering_time: 0.612884
+Silhouettte: [0.041961  0.119772  0.00713679  -0.0159583  0.0525858  0.0990274  0.00833254  -0.0175946  0.0323314  0.201326  0.052892  ]
+Objective function: 4.64214e+10
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 0.57099
+Silhouettte: [0.134938  0.0915345  0.00516977  -0.000644216  0.0558045  0.122334  0.00184637  0.00134273  0.00240438  0.196257  0.0610987  ]
+Objective function: 4.98768e+10
+
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:128, epochs:20
+
+Classic (Lloyd)
+---------------
+clustering_time: 0.574187
+Silhouettte: [0.0899198  0.098229  0.0171964  0.0596552  0.111145  0.0240749  0.191082  0.0353178  0.0507689  0.0702639  0.0747653  ]
+Objective function: 4.1949e+10
+
+Reverse LSH
+------------
+clustering_time: 0.631487
+Silhouettte: [0.0313971  0.0520987  0.028152  0.0740541  0.0611417  0.071335  0.188101  0.0205572  -0.0173987  0.0277257  0.0537164  ]
+Objective function: 4.44283e+10
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 0.521412
+Silhouettte: [0.0410566  0.057741  0.054789  0.0953328  0.089573  0.045859  0.169231  0.0128996  0.00045926  0.0282459  0.0595187  ]
+Objective function: 4.9164e+10
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:128, epochs:20
+
+Classic (Lloyd)
+---------------
+clustering_time: 0.557222
+Silhouettte: [0.00914519  0.0888578  0.111335  0.0483444  0.0790564  0.0102963  0.0391145  0.0584243  0.228995  0.0135614  0.068713  ]
+Objective function: 4.29213e+10
+
+Reverse LSH
+------------
+clustering_time: 0.621922
+Silhouettte: [0.0266239  0.0257933  0.00975034  -0.00340998  0.0700336  0.032291  0.0407245  -0.0107492  0.106057  0.0247809  0.0321895  ]
+Objective function: 4.67397e+10
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 0.525194
+Silhouettte: [0.122476  0.000801179  0.023271  0.049917  0.0403868  0.00122512  0.0592267  0.000624737  0.0926  0.0413112  0.0431839  ]
+Objective function: 4.94532e+10
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 10, batch_size:64, epochs:20
+
+Classic (Lloyd)
+---------------
+clustering_time: 0.53861
+Silhouettte: [0.101838  0.0227535  0.0454418  0.0430281  0.232652  0.0686237  0.0699198  0.0889273  0.0198698  0.081215  0.0774269  ]
+Objective function: 4.17312e+10
+
+
+
+Reverse LSH
+------------
+clustering_time: 0.638511
+Silhouettte: [0.0787649  0.00193449  0.0188042  0.109819  0.13565  0.0209967  0.101232  0.0396474  0.0584808  0.0484072  0.0613737  ]
+Objective function: 4.506e+10
+
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 0.517206
+Silhouettte: [0.150996  0.0396558  0.0362017  0.153723  0.21265  -0.00745199  0.0734545  -0.0135764  0.103371  0.0757946  0.0824819  ]
+Objective function: 4.74774e+10
+
+
+=============================================================================
+=============================================================================
+Reduced dimension: 20, batch_size:64, epochs:20
+
+Classic (Lloyd)
+---------------
+clustering_time: 0.570047
+Silhouettte: [0.086712  0.0423726  0.215511  0.0903022  0.099483  0.0752355  -0.0303101  0.0521562  0.0638676  0.0118915  0.0707222  ]
+Objective function: 4.11376e+10
+
+
+Reverse LSH
+------------
+clustering_time: 0.588028
+Silhouettte: [0.0843671  0.0305224  0.141543  0.0136341  0.0721893  0.0434638  0.00821862  0.00472048  -0.0041145  0.0475532  0.0442097  ]
+Objective function: 4.6739e+10
+
+
+Reverse Hypercube
+-----------------
+clustering_time: 0.523603
+Silhouettte: [0.106329  0.0417364  0.166433  0.0597514  0.0460119  -9.56595e-05  0.0587262  0.000918563  -0.0116164  0.0893648  0.0557559  ]
+Objective function: 4.89859e+10
