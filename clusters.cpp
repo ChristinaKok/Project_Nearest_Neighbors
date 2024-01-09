@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <cmath>
 
-void k_means_pp(vector<vector<double>> ar, vector<vector<double>>&centroids,int k){
+void k_means_pp(const vector<vector<double>> &ar, vector<vector<double>>&centroids,int k){
     
     int datasize = ar.size(); //Size of dataset
 
@@ -54,33 +54,18 @@ void k_means_pp(vector<vector<double>> ar, vector<vector<double>>&centroids,int 
 
 
         prob.resize((datasize-t),0.0); //Vector to save probabilities
-        // for(int i=0;i<(datasize);i++){
-        //     if(centroids_index.find(i) == centroids_index.end()){   //if i not in centroids_index
-        //         for(int j=0;j<i;j++){   //Calculate probability
-        //             double d = distances[j]/distances[max_index];
-        //             prob[i] = pow(d,2);
-        //         }
-        //     }
-        // }
+        
         for(int i=0;i<(int)non_centr_index.size();i++){
-            // if(centroids_index.find(i) == centroids_index.end()){   //if i not in centroids_index
-                for(int j=0;j<i;j++){   //Calculate probability
-                    int k = non_centr_index[j];
-                    double d = distances[k]/distances[max_index];
-                    prob[i] += pow(d,2);
-                }
-            // }
+            for(int j=0;j<i;j++){   //Calculate probability
+                int k = non_centr_index[j];
+                double d = distances[k]/distances[max_index];
+                prob[i] += pow(d,2);
+            }
         }
        
-        //New centroid
-        // double sum = 0;
-        // for(int i=0;i<(int)prob.size();i++){
-        //     sum += prob[i]; //All probabilities 
-        // }
-
         //Random number from 0 to sum with uniform distribution
         double lower_bound = 0;
-        // double upper_bound = sum;
+
         int i = (int)prob.size()-1;
         double upper_bound = prob[i];
     
@@ -113,7 +98,7 @@ void k_means_pp(vector<vector<double>> ar, vector<vector<double>>&centroids,int 
 
 }
 
-vector<Cluster> lloyds(int k, vector<vector<double>> centroids ,vector<vector<double>> ar){
+vector<Cluster> lloyds(int k, vector<vector<double>> &centroids ,const vector<vector<double>> &ar){
 
     near2_cent.resize(ar.size());       //2nd nearest centroid for each point
 
@@ -200,7 +185,7 @@ vector<Cluster> lloyds(int k, vector<vector<double>> centroids ,vector<vector<do
 
 
 
-vector<Cluster> rev_lsh(int L,int k_h,vector<vector<double>> ar,vector<vector<double>> centroids){    
+vector<Cluster> rev_lsh(int L,int k_h,const vector<vector<double>> &ar,vector<vector<double>> &centroids){    
 
     bool flag = true;
     int counter = 0;
@@ -315,7 +300,7 @@ vector<Cluster> rev_lsh(int L,int k_h,vector<vector<double>> ar,vector<vector<do
 
 
 
-vector<Cluster> rev_cube(int k_h,vector<vector<double>> ar,vector<vector<double>> centroids,int M,int probes){    
+vector<Cluster> rev_cube(int k_h,const vector<vector<double>> &ar,vector<vector<double>> &centroids,int M,int probes){    
 
     bool flag = true;
     int counter = 0;
@@ -445,7 +430,7 @@ vector<Cluster> rev_cube(int k_h,vector<vector<double>> ar,vector<vector<double>
 
 
 
-void macqueen(vector<Cluster> &clusters, vector<vector<double>> ar, int p_index, int old_index, int new_index){
+void macqueen(vector<Cluster> &clusters, const vector<vector<double>> &ar, int p_index, int old_index, int new_index){
 
     //New centroid update
     if (old_index != -1){
@@ -475,7 +460,7 @@ void macqueen(vector<Cluster> &clusters, vector<vector<double>> ar, int p_index,
 
 
 
-void macqueen_all(vector<Cluster> &clusters, vector<vector<double>>& new_centroids, vector<vector<double>> ar){
+void macqueen_all(vector<Cluster> &clusters, vector<vector<double>>& new_centroids, const vector<vector<double>> &ar){
     
     //Calculate new centroids 
     for(int i=0;i<(int)clusters.size();i++){ //For every cluster
@@ -495,8 +480,25 @@ void macqueen_all(vector<Cluster> &clusters, vector<vector<double>>& new_centroi
     }
 }
 
+void convert(vector<Cluster> &clusters,const vector<vector<double>>& new_ar, const vector<vector<double>> &ar){
 
-vector<double> silhouette(vector<vector<double>> ar, vector<Cluster> clusters, string method){
+    //find nearest point to centroid
+    for(int c=0 ; c < (int)clusters.size() ; c++){ //for every cluster 
+        double min_dist = euclidean_distance(clusters[c].centroid, new_ar[0]);
+        int min_index = 0;
+        for(int i=1 ; i < (int)new_ar.size() ; i++){
+            double dist = euclidean_distance(clusters[c].centroid, new_ar[i]);
+            if(dist < min_dist){
+                min_dist = dist;
+                min_index = i;
+            }
+        }
+        clusters[c].centroid = ar[min_index]; //centroid in original space is the nearest point to centroid in reduced space
+    }
+
+}
+
+vector<double> silhouette(const vector<vector<double>> &ar, vector<Cluster> &clusters, string method){
 
     if (method.compare("Classic") != 0 ){       //if method is reverse assignent
         near2_cent.resize(ar.size());           //find second nearest centroid for all points
@@ -566,11 +568,18 @@ vector<double> silhouette(vector<vector<double>> ar, vector<Cluster> clusters, s
 
             int max_num = max(a[p1], b[p1]);
 
+            if (max_num == 0) {max_num = 1;}
+
             s[c] += (b[p1] - a[p1])/max_num;
 
         }
 
-        s[c] /= clusters[c].points_index.size();        // s[c] = average s(p) of points in cluster c
+        if ((int) clusters[c].points_index.size() == 0 ){
+            s[c] = 0;
+        } else {
+            s[c] /= clusters[c].points_index.size();        // s[c] = average s(p) of points in cluster c
+        }
+        
         s[k] += s[c];
 
     }
@@ -583,4 +592,119 @@ vector<double> silhouette(vector<vector<double>> ar, vector<Cluster> clusters, s
 
     return s;
 
+}
+
+
+vector<double> silhouette_red(const vector<vector<double>> &ar, vector<Cluster> &clusters, string method, const vector<vector<double>> &new_ar){
+
+    if (method.compare("Classic") != 0 ){       //if method is reverse assignent
+        near2_cent.resize(new_ar.size());           //find second nearest centroid for all points
+
+        for (int p=0; p<(int)new_ar.size(); p++){
+            double min_dist = euclidean_distance(new_ar[p], clusters[0].centroid);
+            int min = 0;
+            near2_cent[p].first = 1;
+            near2_cent[p].second = euclidean_distance(new_ar[p], clusters[1].centroid);
+            if (min_dist > near2_cent[p].second){
+                double temp = near2_cent[p].second;
+                near2_cent[p].second = min_dist;
+                near2_cent[p].first = 0;
+                min_dist = temp;
+                min = 1;
+            }
+            for (int c=2; c<(int)clusters.size(); c++){
+                double dist = euclidean_distance(new_ar[p], clusters[c].centroid);
+                if (dist < min_dist){
+                    int temp1 = min;
+                    double temp2 = min_dist;
+                    min_dist = dist;
+                    min = c;
+                    near2_cent[p].first = temp1;
+                    near2_cent[p].second = temp2;
+                } else if (dist < near2_cent[p].second) {
+                    near2_cent[p].first = c;
+                    near2_cent[p].second = dist;
+                }
+            }
+
+            //check if p is in cluster with min distance
+            auto it = find(clusters[min].points_index.begin(), clusters[min].points_index.end(), p);        
+            if ( it == clusters[min].points_index.end() ){       //if p is not assigned to real closest cluster
+                near2_cent[p].first = min;
+                near2_cent[p].second = min_dist;
+            }
+        }
+    }
+
+    vector<double> s(clusters.size()+1, 0.0);        //size k+1
+    vector<double> a(ar.size(), 0.0);
+    vector<double> b(ar.size(), 0.0);
+    int k = (int)clusters.size();
+   
+    convert(clusters,new_ar,ar);
+
+    
+    for (int c=0; c<(int)clusters.size(); c++){
+
+        for (auto p1: clusters[c].points_index){
+
+            //compute a[p1] = average distance of p1 to objects in same cluster
+            for (auto p2: clusters[c].points_index){
+                if ( p1 != p2 ){
+                    double dist = euclidean_distance(ar[p1], ar[p2]);
+                    a[p1] += dist;
+                }
+            }
+            a[p1] /= (int)clusters[c].points_index.size();
+
+            //compute b[p1] = average distance of p1 to objects in next best (neighbor) cluster
+            int j=near2_cent[p1].first;
+
+            for (auto p2: clusters[j].points_index){
+                double dist = euclidean_distance(ar[p1], ar[p2]);
+                b[p1] += dist;
+            }
+            b[p1] /= (int)clusters[j].points_index.size();
+
+            int max_num = max(a[p1], b[p1]);
+
+            if (max_num == 0) {max_num = 1;}
+
+            s[c] += (b[p1] - a[p1])/max_num;
+
+        }
+
+        if ((int) clusters[c].points_index.size() == 0 ){
+            s[c] = 0;
+        } else {
+            s[c] /= clusters[c].points_index.size();        // s[c] = average s(p) of points in cluster c
+        }
+        
+        s[k] += s[c];
+
+    }
+
+    s[k] /= k;      // s[k] = stotal = average s(p) of points in dataset
+    
+    vector<double>().swap(a);
+    vector<double>().swap(b);
+    vector<pair<int,double>>().swap(near2_cent);
+
+    return s;
+
+}
+
+
+double objective_function(const vector<vector<double>> &ar, const vector<Cluster> &clusters){
+
+    double sum = 0.0;
+
+    for (int c=0; c<(int)clusters.size(); c++){
+        for (auto p: clusters[c].points_index){
+            double dist = euclidean_distance(ar[p], clusters[c].centroid);
+            sum += (dist*dist) ;
+        }
+    }
+
+    return sum;
 }
