@@ -128,15 +128,6 @@ int main(int argc, char *argv[]) {
                 }
             }
 
-            // //print graph
-            //     for (int i=0; i<(int)ar.size(); i++){
-            //         cout << i << "--> ";
-            //         for (auto n: graph[i]){
-            //             cout << n << "   ";
-            //         }
-            //         cout << endl;
-            //     }
-            // break;
 
             vector<set<pair<int,double>,Cmp>> neighbors(query_size); 
             vector<vector<pair<int,double>>> neighbors_init(query_size); 
