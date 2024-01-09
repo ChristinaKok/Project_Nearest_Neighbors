@@ -16,7 +16,6 @@ void initialize_graph(int data_size, int k, const vector<vector<double>> &ar){
 
     initialize_hash_table(L, k_h, ar);
 
-    // vector<vector<pair<int,double>>> neighbors(number_of_points); 
     graph.resize(number_of_points);
 
     //find neighbors
@@ -24,7 +23,6 @@ void initialize_graph(int data_size, int k, const vector<vector<double>> &ar){
         
         vector<double> point = ar[p];
         vector<pair<int,double>> neighbors;
-        cout << p << "  -  ";
 
         for (int i=0; i<L; i++){    
             double id;                                      //ID of query for this hash table
@@ -32,8 +30,6 @@ void initialize_graph(int data_size, int k, const vector<vector<double>> &ar){
 
             find_neighbors(neighbors, i, g, id, ar, point, euclidean_distance);
         }
-
-        cout << neighbors.size() << endl;
         
         sort( neighbors.begin(), neighbors.end(), sort_by_dist);
         neighbors.erase( unique( neighbors.begin(), neighbors.end() ), neighbors.end() );
@@ -299,3 +295,4 @@ void convert_init(const set<pair<int,double>,Cmp> &neighbors, const vector<vecto
         conv_neigh.push_back(make_pair(p, dist));
     }
 }
+
