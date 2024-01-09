@@ -60,7 +60,9 @@ Link repository github: https://github.com/ChristinaKok/Project3
 
 Νέες συναρτήσεις:
     * silhouette_red: Υπολογισμός δείκτη silhouette έπειτα από αναγωγή των σημείων στον αρχικό χώρο. 
+    
     * convert: Υπολογισμός νέου centroid κατά την αναγωγή στον αρχικό χώρο.
+    
     * objective_function: Υπολογισμός συνάρτησης στόχου.
 
 
