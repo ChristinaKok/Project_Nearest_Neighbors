@@ -59,6 +59,7 @@ Link repository github: https://github.com/ChristinaKok/Project3
 Εκτέλεση: ./cluster -i (input_file) -ri (reduced_input_file) -c (configuration_file) -o (output_file) -m (Classic ή LSH ή Hypercube) -complete (optional)
 
 Νέες συναρτήσεις:
+    
     * silhouette_red: Υπολογισμός δείκτη silhouette έπειτα από αναγωγή των σημείων στον αρχικό χώρο. 
     
     * convert: Υπολογισμός νέου centroid κατά την αναγωγή στον αρχικό χώρο.
