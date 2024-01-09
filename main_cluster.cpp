@@ -104,6 +104,8 @@ int main(int argc, char *argv[]){
     cout << "\nComputing Silhouette" << endl;
 
     vector<double> s = silhouette(ar, clusters, method);
+
+    double obj_f = objective_function(ar, clusters);        //compute objective function
     
 
     //Create the output file
@@ -135,6 +137,8 @@ int main(int argc, char *argv[]){
             OutputFile << s[i] << "  ";
         }
         OutputFile << "]" << endl;
+
+        OutputFile << "Objective function: " << obj_f << endl;
         
         if (complete){
             OutputFile << endl;
