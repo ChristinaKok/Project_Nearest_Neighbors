@@ -85,8 +85,8 @@ int main(int argc, char *argv[]) {
             vector<double> duration_lsh(query_size);
             vector<double> duration_real(query_size);
 
-            double avg_duration=0.0, avg_duration_real=0.0;
-            vector<double> maf(query_size);
+            double avg_duration=0.0, avg_duration_real=0.0, avg_af=0.0;
+            vector<double> af(query_size);
 
             for (int q=0; q<query_size; q++){
 
@@ -123,11 +123,12 @@ int main(int argc, char *argv[]) {
 
                 //compute approximation factor
                 if ((int)neighbors[q].size() > 0){
-                    pair<int,double> appr_neighbor = *neighbors[q].begin();  
-                    maf[q] = appr_neighbor.second / real_neighbors[q][0].second ;
+                    pair<int,double> appr_neighbor = neighbors[q][0];
+                    af[q] = appr_neighbor.second / real_neighbors[q][0].second ;
                 } else {
-                    maf[q] = -1;
+                    af[q] = -1;
                 }
+                avg_af += af[q];
                 
 
                 //find nearest neighbors with range search
@@ -146,6 +147,7 @@ int main(int argc, char *argv[]) {
 
             avg_duration /= query_size;
             avg_duration_real /= query_size;
+            avg_af /= query_size;
             
 
             //Create the output file
@@ -179,7 +181,7 @@ int main(int argc, char *argv[]) {
                 }
                 OutputFile << "\ntAverageApproximate: " << avg_duration << std::endl;
                 OutputFile << "tAverageTrue: " << avg_duration_real << std::endl;
-                OutputFile << "MAF: " << *max_element(maf.begin(), maf.end()) << "  [Maximum Approximation Factor]" << std::endl;
+                OutputFile << "AAF: " << avg_af << "  [Average Approximation Factor]" << std::endl;
             }
             cout << "------------------------\n" << endl;
 
