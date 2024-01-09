@@ -5,12 +5,11 @@ from sklearn.model_selection import train_test_split
 import keras
 import matplotlib.pyplot as plt
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import BatchNormalization, SeparableConv2D, MaxPooling2D, Activation, Flatten, Dropout, Dense
+from tensorflow.keras.layers import BatchNormalization, MaxPooling2D, Flatten, Dense
 from tensorflow.keras import backend as K
-from keras.layers import Input,Reshape,Conv2D,UpSampling2D,Conv2DTranspose
+from keras.layers import Input,Reshape,Conv2D,UpSampling2D
 from keras.models import Model,Sequential
-from keras.optimizers import Adadelta, RMSprop,SGD,Adam
+from keras.optimizers import RMSprop,SGD,Adam
 
 tf.keras.utils.set_random_seed(1)
 
@@ -42,49 +41,34 @@ def writeFile(filename, data):
             p = p+1
 
 
-
+            
 #create autoencoder
-def encoder(input_img,latent_dim):     #input = 28 x 28 x 1 (wide and thin)
-    conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(input_img) #28 x 28 x 32
-    conv1 = BatchNormalization()(conv1)
-    conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv1)
-    conv1 = BatchNormalization()(conv1)
-    pool1 = MaxPooling2D(pool_size=(2, 2))(conv1) #14 x 14 x 32
-    conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(pool1) #14 x 14 x 64
-    conv2 = BatchNormalization()(conv2)
-    conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv2)
-    conv2 = BatchNormalization()(conv2)
-    pool2 = MaxPooling2D(pool_size=(2, 2))(conv2) #7 x 7 x 64
-    conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(pool2) #7 x 7 x 128 (small and thick)
-    conv3 = BatchNormalization()(conv3)
-    conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(conv3)
-    conv3 = BatchNormalization()(conv3)
-    conv4 = Conv2D(256, (3, 3), activation='relu', padding='same')(conv3) #7 x 7 x 256 (small and thick)
-    conv4 = BatchNormalization()(conv4)
-    conv4 = Conv2D(256, (3, 3), activation='relu', padding='same')(conv4)
-    conv4 = BatchNormalization()(conv4)
-    flat = Flatten()(conv4)
+def encoder(input_img,latent_dim):     #input = 28 x 28 x 1
+    x = Conv2D(32, (3, 3), activation='relu', padding='same')(input_img)    #28 x 28 x 32
+    x = BatchNormalization()(x)
+    x = MaxPooling2D(pool_size=(2, 2))(x)                                   #14 x 14 x 32
+
+    x = Conv2D(64, (3, 3), activation='relu', padding='same')(x)            #14 x 14 x 64
+    x = BatchNormalization()(x)
+    x = MaxPooling2D(pool_size=(2, 2))(x)                                   #7 x 7 x 64
+
+    flat = Flatten()(x)
     latent_output = Dense(latent_dim, activation='relu')(flat)  # Latent dimension
     return latent_output
 
 def decoder(latent_output): 
-    x = Dense(6272, activation='relu')(latent_output)  # Dense layer to match the flattened shape before decoding
-    x = Reshape((7, 7, 128))(x)
-    conv5 = Conv2D(128, (3, 3), activation='relu', padding='same')(x) #7 x 7 x 128
-    conv5 = BatchNormalization()(conv5)
-    conv5 = Conv2D(128, (3, 3), activation='relu', padding='same')(conv5)
-    conv5 = BatchNormalization()(conv5)
-    conv6 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv5) #7 x 7 x 64
-    conv6 = BatchNormalization()(conv6)
-    conv6 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv6)
-    conv6 = BatchNormalization()(conv6)
-    up1 = UpSampling2D((2,2))(conv6) #14 x 14 x 64
-    conv7 = Conv2D(32, (3, 3), activation='relu', padding='same')(up1) # 14 x 14 x 32
-    conv7 = BatchNormalization()(conv7)
-    conv7 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv7)
-    conv7 = BatchNormalization()(conv7)
-    up2 = UpSampling2D((2,2))(conv7) # 28 x 28 x 32
-    decoded = Conv2D(1, (3, 3), activation='sigmoid', padding='same')(up2) # 28 x 28 x 1
+    x = Dense(3136, activation='relu')(latent_output)
+    x = Reshape((7, 7, 64))(x)                                              #7 x 7 x 64
+
+    x = Conv2D(64, (3, 3), activation='relu', padding='same')(x)            #7 x 7 x 64
+    x = BatchNormalization()(x)
+    x = UpSampling2D((2,2))(x)                                              #14 x 14 x 64
+
+    x = Conv2D(32, (3, 3), activation='relu', padding='same')(x)            #14 x 14 x 32
+    x = BatchNormalization()(x)
+    x = UpSampling2D((2,2))(x)                                              #28 x 28 x 32
+
+    decoded = Conv2D(1, (3, 3), activation='sigmoid', padding='same')(x)    #28 x 28 x 1
     return decoded
 
 
@@ -108,8 +92,7 @@ def plot_history(nn):
     plt.title("Loss")
     plt.legend(["training", "validation"]) 
 
-    plt.suptitle("epochs=5, batch_size=128, latent_dim=10")
-    plt.savefig('acc_loss_5_128_10.png')
+    plt.savefig('acc_loss.png')
 
 
 ###############################################################################################################
@@ -143,12 +126,12 @@ train_X,valid_X,train_real,valid_real = train_test_split(train_data, train_data,
 
 
 #define hyper-parameters
+latent_dim = 10
 batch_size = 128
-epochs = 5
+epochs = 10
 inChannel = 1
 x, y = 28, 28
 input_img = Input(shape = (x, y, inChannel))
-latent_dim = 10
 
 autoencoder = Model(input_img, decoder(encoder(input_img, latent_dim)))
 autoencoder.compile(loss='mean_squared_error', optimizer = RMSprop(), metrics='accuracy')
@@ -164,13 +147,12 @@ autoencoder.save_weights('autoencoder.h5')
 #trained encoder
 encode = Model(input_img, encoder(input_img,latent_dim))
 
-for l1,l2 in zip(encode.layers[:19], autoencoder.layers[0:19]):
+for l1,l2 in zip(encode.layers[:9], autoencoder.layers[0:9]):
     l1.set_weights(l2.get_weights())
 
-for layer in encode.layers[0:19]:
+for layer in encode.layers[0:9]:
     layer.trainable = False
 
-# encode.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimizers.Adam(),metrics=['accuracy'])
 
 #save images in latent dimension
 reduced_train = encode.predict(train_data)
@@ -182,3 +164,4 @@ writeFile(outputQueryFile, reduced_test)
 
 #plot loss-accuracy
 plot_history(autoencoder_train)
+
